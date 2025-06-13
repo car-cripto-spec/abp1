@@ -11,7 +11,7 @@ namespace abp1
             InitializeComponent();
         }
 
-        private void OnLoginClicked(object sender, EventArgs e)
+        private async void OnLoginClicked(object sender, EventArgs e)
         {
             // Obtener los datos almacenados
             string correoGuardado = Preferences.Get("Correo", string.Empty);
@@ -24,9 +24,9 @@ namespace abp1
             // Validar
             if (correoIngresado == correoGuardado && contrasenaIngresada == contrasenaGuardada)
             {
+                Preferences.Set("IsLoggedIn", true);
                 DisplayAlert("Inicio de sesión", "Inicio de sesión exitoso.", "OK");
-                // Aquí puedes navegar a otra página si es necesario
-                // Navigation.PushAsync(new MainPage());
+                 Navigation.PushAsync(new MainPage());
             }
             else
             {

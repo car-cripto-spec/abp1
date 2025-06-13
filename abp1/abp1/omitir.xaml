@@ -1,0 +1,220 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="abp1.omitir"
+             BackgroundColor="#D6E1FF"
+             Title="DARE">
+
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Header -->
+            <RowDefinition Height="*"/>
+            <!-- Scrollable Content -->
+            <RowDefinition Height="60"/>
+            <!-- Bottom Navigation -->
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Grid Padding="1" ColumnSpacing="01" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <AbsoluteLayout>
+
+                <Image Source="https://i.postimg.cc/1tPQpJfb/logo.jpg" 
+         WidthRequest="120"
+         HeightRequest="120"
+         Aspect="AspectFit"
+         AbsoluteLayout.LayoutBounds="5,-20,120,120"
+         AbsoluteLayout.LayoutFlags="None"  />
+            </AbsoluteLayout>
+
+
+
+            <StackLayout Orientation="Horizontal"
+                 Spacing="5"
+                 Grid.Column="2"
+                 VerticalOptions="Start"
+                 Padding="-3,20,10,0">
+                <!-- Alinea con el logo -->
+                <!-- Ícono Usuario -->
+                <Label Text="👤" FontSize="25">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnperfilTapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <!-- Ícono Lupa -->
+                <Label Text="🔍" FontSize="25">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnBusquedaTapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <!-- Ícono Campana -->
+                <Label Text="🔔" FontSize="25">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnNotificacionesTapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <!-- Ícono Menú -->
+                <Label Text="☰" FontSize="25">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnconfiguracionTapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+        </Grid>
+
+
+        <!-- Scrollable Cards -->
+        <ScrollView Grid.Row="1">
+            <StackLayout Padding="20" Spacing="20">
+
+                <!-- CARD 1 -->
+                <Frame BackgroundColor="#A9C9FF" CornerRadius="10" Padding="15">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnEvento_vistaTapped"/>
+                    </Frame.GestureRecognizers>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Contenido de la tarjeta -->
+                        <StackLayout Grid.Column="0" Spacing="10">
+                            <Image Source="https://www.investopedia.com/thmb/CWFdk-YJkte3rNO_76FNCSfi5mM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1498170916-39ceb2a46795483fbbcb05ffa82b79eb.jpg" Aspect="AspectFill" HeightRequest="150"/>
+                            <Label Text="Donación de alimentos"
+                   FontAttributes="Bold"
+                   FontSize="16"
+                   TextColor="Black"/>
+                            <Label Text="El propósito del evento es participar con la entrega de alimentos a personas en situacion de calle."
+                   FontSize="12"
+                   TextColor="Black"/>
+
+                            <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
+                                <Button Text="DONAR" BackgroundColor="LightGreen" TextColor="Black" Clicked="OnMeta_donacionespped"/>
+                                <Button Text="REGISTRARSE" BackgroundColor="LightGray" TextColor="Black" Clicked="OnRegistroTapped"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <!-- Íconos al lado derecho, en vertical -->
+                        <Frame Grid.Column="1"
+               BackgroundColor="#A9C9FF"
+               CornerRadius="15"
+               Padding="5"
+               Margin="5,0,0,0"
+               VerticalOptions="Center">
+                            <StackLayout Spacing="15">
+                                <Label Text="♡" FontSize="24" HorizontalTextAlignment="Center"/>
+                                <Label Text="🗨️" FontSize="24" HorizontalTextAlignment="Center"/>
+                                <Label Text="❓" FontSize="24" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                </Frame>
+
+
+                <!-- CARD 2 -->
+
+                <Frame BackgroundColor="#A9C9FF" CornerRadius="20" Padding="10">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnEvento_vistaTapped"/>
+                    </Frame.GestureRecognizers>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Contenido de la tarjeta -->
+                        <StackLayout Grid.Column="0" Spacing="10">
+                            <Image Source="https://blob.diariodelistmo.com/images/2024/10/27/portada-michiloteria-evento-gatos-refugio-veracruz-focus-0-0-495-370.png" Aspect="AspectFill" HeightRequest="150"/>
+                            <Label Text="Ciudad Felina"
+    FontAttributes="Bold"
+    FontSize="16"
+    TextColor="Black"/>
+                            <Label Text="El propósito del evento apoyar en el cuidado de nuestros amigos felinos los cuales fueron acogidos de la calle."
+    FontSize="12"
+    TextColor="Black"/>
+
+                            <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
+                                <Button Text="DONAR" BackgroundColor="LightGreen" TextColor="Black" Clicked="OnMeta_donacionespped"/>
+                                <Button Text="REGISTRARSE" BackgroundColor="LightGray" TextColor="Black" Clicked="OnRegistroTapped"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <!-- Íconos al lado derecho, en vertical -->
+                        <Frame Grid.Column="1"
+BackgroundColor="#A9C9FF"
+CornerRadius="15"
+Padding="5"
+Margin="5,0,0,0"
+VerticalOptions="Center">
+                            <StackLayout Spacing="15">
+                                <Label Text="♡" FontSize="24" HorizontalTextAlignment="Center"/>
+                                <Label Text="🗨️" FontSize="24" HorizontalTextAlignment="Center"/>
+                                <Label Text="❓" FontSize="24" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                </Frame>
+
+
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Bottom Navigation -->
+        <StackLayout Grid.Row="2"
+             Orientation="Horizontal"
+             BackgroundColor="#86b0d8"
+             HeightRequest="60"
+             HorizontalOptions="FillAndExpand"
+             Padding="0"
+             Spacing="0"
+             VerticalOptions="End">
+
+            <Button Text="💵" FontSize="26" Padding="0"
+            BackgroundColor="Transparent"
+            BorderWidth="0"
+            WidthRequest="60"
+            HorizontalOptions="FillAndExpand"
+            Clicked="OnEventos_donarTapped"/>
+
+            <Button Text="↩️" FontSize="26" Padding="0"
+            BackgroundColor="Transparent"
+            BorderWidth="0"
+                         WidthRequest="60"
+            HorizontalOptions="FillAndExpand"
+            Clicked="OnTuEventoPage"/>
+
+            <Button Text="➕" FontSize="26" Padding="0"
+            BackgroundColor="Transparent"
+            BorderWidth="0"
+            HorizontalOptions="FillAndExpand"
+                         WidthRequest="60"
+            Clicked="OnAgregareventoPage"/>
+
+            <Button Text="♡" FontSize="26" Padding="0"
+            BackgroundColor="Transparent"
+            BorderWidth="0"
+                         WidthRequest="60"
+            HorizontalOptions="FillAndExpand"/>
+
+            <Button Text="🏆" FontSize="26" Padding="0"
+            BackgroundColor="Transparent"
+            BorderWidth="0"
+                         WidthRequest="60"
+            HorizontalOptions="FillAndExpand"
+            Clicked="OntrofeosTapped"/>
+
+
+        </StackLayout>
+
+
+    </Grid>
+</ContentPage>

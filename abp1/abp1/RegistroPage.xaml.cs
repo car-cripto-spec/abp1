@@ -11,7 +11,7 @@ namespace abp1
             InitializeComponent();
         }
 
-        private void OnRegistrarClicked(object sender, EventArgs e)
+        private async void OnRegistrarClicked(object sender, EventArgs e)
         {
             // Guardar datos en Preferences
             Preferences.Set("Nombre", EntryNombre.Text);
@@ -21,8 +21,10 @@ namespace abp1
             Preferences.Set("Correo", EntryCorreo.Text);
             Preferences.Set("Contrasena", EntryContrasena.Text);
             Preferences.Set("Descripcion", EntryDescripcion.Text);
+            Preferences.Set("IsLoggedIn", true);
 
             DisplayAlert("Registro", "Datos guardados exitosamente.", "OK");
+            await Navigation.PushAsync(new MainPage());
         }
     }
 }

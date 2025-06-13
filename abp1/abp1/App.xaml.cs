@@ -1,6 +1,6 @@
-﻿using System;
+﻿using abp1;
+using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace abp1
 {
@@ -8,28 +8,14 @@ namespace abp1
     {
         public App()
         {
-            {
-                InitializeComponent();
+            InitializeComponent();
 
-                // Envolver MainPage en un NavigationPage para habilitar PushAsync
-                MainPage = new NavigationPage(new MainPage());
+            bool isLoggedIn = Preferences.Get("IsLoggedIn", false);
 
-               
-            }
-        }
-
-        protected override void OnStart()
-        {
-            
-
-        }
-
-        protected override void OnSleep()
-        {
-        }
-
-        protected override void OnResume()
-        {
+            if (isLoggedIn)
+                MainPage = new NavigationPage(new MainPage());  // Ya está logueado
+            else
+                MainPage = new NavigationPage(new InicioSesionPage()); // Necesita loguearse
         }
     }
 }
