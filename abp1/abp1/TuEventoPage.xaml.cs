@@ -42,6 +42,7 @@ namespace abp1
             {
                 comentariosLabel.Text = comentarioGuardado;
             }
+
         }
 
         private void OnEnviarComentarioClicked(object sender, EventArgs e)
@@ -55,14 +56,9 @@ namespace abp1
 
                 DisplayAlert("Comentario guardado", "Tu comentario ha sido guardado", "OK");
             }
+
         }
 
-        private async void editarclick(object sender, EventArgs e)
-        {
-            // ✅ Ir a la página de edición con el evento actual
-            await Navigation.PushAsync(new EditarEventoPage(eventoActual));
-        }
-
-
+        
     }
 }

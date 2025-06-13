@@ -115,7 +115,7 @@ namespace abp1
                 eventos.Remove(eventoAEliminar);
                 Preferences.Set("eventos_lista", JsonConvert.SerializeObject(eventos));
                 await DisplayAlert("Éxito", "Evento eliminado correctamente", "OK");
-                await Navigation.PushAsync(new Favoritos());
+                await Navigation.PushAsync(new FavoritosPage());
             }
             else
             {
