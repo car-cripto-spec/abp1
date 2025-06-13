@@ -80,9 +80,9 @@
                 </StackLayout>
             </Frame>
             <Button Text="editar"
-             BackgroundColor="#75A7E5"
-          TextColor="Black"
-           Clicked="editarclick"/>
+BackgroundColor="#75A7E5"
+TextColor="Black"
+Clicked="editarclick"/>
 
         </StackLayout>
     </ScrollView>

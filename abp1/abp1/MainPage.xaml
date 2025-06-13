@@ -118,6 +118,7 @@
                                  HeightRequest="45"
                                  HorizontalOptions="Center"
                                  BackgroundColor="Transparent"
+                                    Clicked="OnFavoritosPageTapped"
                                  />
                                 <Label Text="🗨️" FontSize="24" HorizontalTextAlignment="Center"/>
                                 <Label Text="❓" FontSize="24" HorizontalTextAlignment="Center"/>
@@ -218,7 +219,8 @@ VerticalOptions="Center">
             BackgroundColor="Transparent"
             BorderWidth="0"
                          WidthRequest="60"
-            HorizontalOptions="FillAndExpand"/>
+            HorizontalOptions="FillAndExpand"
+                         Clicked="OnFavoritosTapped"/>
 
                 <Button Text="🏆" FontSize="26" Padding="0"
             BackgroundColor="Transparent"
