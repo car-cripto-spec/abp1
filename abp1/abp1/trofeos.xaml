@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="abp1.trofeos"
+             Title="Logros"
+             BackgroundColor="#d0d8f4">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+
+            <Label Text="Logros" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+
+            <!-- Logros obtenidos -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="30">
+                <StackLayout>
+                    <Image Source="https://static.vecteezy.com/system/resources/previews/021/970/088/non_2x/award-trophy-goblet-bronze-cup-in-flat-design-free-png.png" HeightRequest="100" WidthRequest="100"/>
+                    <Label Text="Copa de bronce" FontSize="14" HorizontalOptions="Center"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image Source="https://static.vecteezy.com/system/resources/previews/011/811/854/non_2x/bronze-shield-badge-free-png.png" HeightRequest="100" WidthRequest="100"/>
+                    <Label Text="Nivel 1" FontSize="14" HorizontalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Progreso -->
+            <Label Text="Donaciones dadas 25%-100%" FontAttributes="Bold" />
+            <ProgressBar Progress="0.25" HeightRequest="20" BackgroundColor="LightGray" ProgressColor="#4d79ff"/>
+
+            <Label Text="Voluntariados asistidos 50%-100%" FontAttributes="Bold" />
+            <ProgressBar Progress="0.5" HeightRequest="20" BackgroundColor="LightGray" ProgressColor="#4d79ff"/>
+
+            <!-- Metas -->
+            <Label Text="Metas a lograr:" FontAttributes="Bold" FontSize="18"/>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="30">
+                <StackLayout>
+                    <Image Source="https://cdn-icons-png.flaticon.com/512/2502/2502698.png" HeightRequest="100" WidthRequest="100"/>
+                    <Label Text="Copa de plata" FontSize="14" HorizontalOptions="Center"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image Source="https://images.vexels.com/media/users/3/134519/isolated/preview/02029c4458d8f446a887015d030acca1-etiqueta-de-escudo-emblema-3d.png?w=360" HeightRequest="100" WidthRequest="100"/>
+                    <Label Text="Nivel 15–30" FontSize="14" HorizontalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

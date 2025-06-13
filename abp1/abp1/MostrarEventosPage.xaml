@@ -1,0 +1,78 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="abp1.MostrarEventosPage"
+             Title="Tus Eventos"
+             BackgroundColor="#D9E5F6">
+
+    <StackLayout Padding="10" >
+
+        <!-- Encabezado -->
+        <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
+            <Label Text="Tus Eventos" FontSize="20" FontAttributes="Bold" />
+        </StackLayout>
+
+        <ScrollView Grid.Row="1">
+            <StackLayout Padding="10" Spacing="10">
+                <!-- Lista de eventos -->
+                <CollectionView x:Name="eventosCollectionView" SelectionMode="None">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BackgroundColor="#A9C9FF"
+                                   CornerRadius="10"
+                                   Padding="10"
+                                   Margin="0,0,0,20">
+                                <!-- Agregado: más espacio abajo -->
+                                <Frame.GestureRecognizers>
+                                    <!-- Tu gesto si lo agregas -->
+                                </Frame.GestureRecognizers>
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <!-- Contenido de la tarjeta -->
+                                    <StackLayout Grid.Column="0" Spacing="10">
+                                        <Image Source="{Binding Imagen}" Aspect="AspectFill" HeightRequest="150" />
+                                        <Label Text="{Binding Nombre}" FontAttributes="Bold" FontSize="16" TextColor="Black"/>
+                                        <Label Text="{Binding Descripcion}" FontSize="12" TextColor="Black" LineBreakMode="WordWrap"/>
+
+                                        <!-- Botones -->
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="10">
+                                            <Button Text="tu evento"
+                                                    BackgroundColor="LightGreen"
+                                                    TextColor="Black"
+                                                    CornerRadius="10"
+                                                    HeightRequest="35"
+                                                    Clicked="OnTuEventoClicked"/>
+                                        </StackLayout>
+                                    </StackLayout>
+
+                                    <!-- Íconos a la derecha -->
+                                    <Frame Grid.Column="1"
+                                           BackgroundColor="#A9C9FF"
+                                           CornerRadius="15"
+                                           Padding="5"
+                                           Margin="5,0,0,0"
+                                           VerticalOptions="Center">
+                                        <StackLayout Spacing="15">
+                                            <Label Text="♡" FontSize="24" HorizontalTextAlignment="Center"/>
+                                            <Label Text="🗨️" FontSize="24" HorizontalTextAlignment="Center"/>
+                                            <Label Text="❓" FontSize="24" HorizontalTextAlignment="Center"/>
+                                        </StackLayout>
+                                    </Frame>
+
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </ScrollView>
+      
+
+        
+
+    </StackLayout>
+</ContentPage>

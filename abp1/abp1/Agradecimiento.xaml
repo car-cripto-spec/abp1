@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="abp1.Agradecimiento"
+             BackgroundColor="#DCE3F3"
+             Title="Agradecimiento">
+
+    <StackLayout Padding="20" Spacing="20" VerticalOptions="Center">
+        <!-- Flecha hacia atrás -->
+        <Image Source="back_arrow.png"
+               HeightRequest="24"
+               WidthRequest="24">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnBackTapped" />
+            </Image.GestureRecognizers>
+        </Image>
+
+        <!-- Mensaje de éxito -->
+        <Label Text="transaccion realizada con exito"
+               HorizontalOptions="Center"
+               FontSize="Medium"
+               TextColor="Black" />
+
+        <!-- Imagen central -->
+        <Image Source="https://png.pngtree.com/png-vector/20240913/ourmid/pngtree-trophy-png-vector-material-png-image_12930952.png"
+               Aspect="AspectFill"
+               HeightRequest="400"
+               WidthRequest="400"
+               HorizontalOptions="Center" />
+           
+
+        <!-- Mensaje de agradecimiento -->
+        <Label Text="muchas gracias por realizar tu donacion caridad"
+               HorizontalOptions="Center"
+               FontSize="Medium"
+               TextColor="Black"
+               HorizontalTextAlignment="Center" />
+
+        <!-- Botón de recompensa -->
+        <Button Text="revisar recompensas"
+                BackgroundColor="#ead05d"
+                TextColor="Black"
+                Clicked="OnRevisarRecompensasClicked"
+                CornerRadius="20"
+                Padding="10"
+                HorizontalOptions="Center" />
+    </StackLayout>
+</ContentPage>

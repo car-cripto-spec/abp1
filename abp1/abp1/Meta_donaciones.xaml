@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="abp1.Meta_donaciones"
+             BackgroundColor="#dbe3f3"
+             Title="Meta de Donaciones">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+
+
+            <!-- Subtítulo -->
+            <Label Text="Donacion de alimentos"
+                   FontSize="18"
+                   HorizontalOptions="Center"
+                   TextColor="Black"/>
+
+            <!-- Imagen -->
+            <Image Source="https://www.investopedia.com/thmb/CWFdk-YJkte3rNO_76FNCSfi5mM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1498170916-39ceb2a46795483fbbcb05ffa82b79eb.jpg"
+                   HeightRequest="150"
+                   Aspect="AspectFill"
+                   HorizontalOptions="Center"/>
+
+            <!-- Título de sección -->
+            <Label Text="meta de donaciones"
+                   FontSize="18"
+                   HorizontalOptions="Center"
+                   TextColor="Black"/>
+
+            <!-- Trofeo -->
+            <Image Source="https://static.vecteezy.com/system/resources/previews/021/970/088/non_2x/award-trophy-goblet-bronze-cup-in-flat-design-free-png.png"
+                   HeightRequest="80"
+                   HorizontalOptions="Center"/>
+
+            <!-- Meta -->
+            <Label Text="$5000"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="Black"/>
+
+            <Label Text="monto donado $1500 de $5000"
+                   FontSize="14"
+                   HorizontalOptions="Center"
+                   TextColor="Black"/>
+
+            <!-- Porcentaje -->
+            <Label Text="porcentaje de donaciones: 30%"
+                   FontSize="14"
+                   HorizontalOptions="Center"
+                   TextColor="Black"/>
+
+            <!-- Barra de progreso -->
+            <ProgressBar Progress="0.3"
+                         ProgressColor="Green"
+                         HeightRequest="10"/>
+
+            <!-- Agradecimiento -->
+            <Label Text="gacias por su apoyo"
+                   FontSize="16"
+                   HorizontalOptions="Center"
+                   TextColor="Black"/>
+
+            <!-- Botón de donar -->
+            <StackLayout HorizontalOptions="Center">
+                <Image Source="heart_icon.png"
+                       HeightRequest="40"
+                       WidthRequest="40"
+                       HorizontalOptions="Center"/>
+                <Button Text="donar"
+                        BackgroundColor="#90ee90"
+                        TextColor="Black"
+                        CornerRadius="10"
+                        WidthRequest="100"
+                        Clicked="OnDonacionClicked"
+                        />
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="abp1.Donacion"
+             BackgroundColor="#D8E6F3"
+             Title="Donar">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20" Spacing="15">
+
+              
+                <!-- Nombre -->
+                <Label Text="nombre" FontAttributes="Bold" />
+                <Entry x:Name="NombreEntry" Placeholder="inserte su nombre" />
+
+                <!-- Número de tarjeta -->
+                <Label Text="No. tarjeta" FontAttributes="Bold" />
+                <Entry x:Name="TarjetaEntry" Placeholder="agregue su numero de tarjeta" Keyboard="Numeric" />
+
+                <!-- Expiración -->
+                <Label Text="expiracion" FontAttributes="Bold" />
+                <DatePicker x:Name="FechaExpiracionPicker"
+                            Format="MMMM yyyy"
+                            MinimumDate="{x:Static sys:DateTime.Now}" />
+
+                <!-- CVV -->
+                <Label Text="CVV" FontAttributes="Bold" />
+                <Entry x:Name="CVVEntry" IsPassword="True" Placeholder="***" Keyboard="Numeric" />
+
+                <!-- Monto a dar -->
+                <Label Text="Monto a dar" FontAttributes="Bold" />
+                <Entry x:Name="MontoEntry" Placeholder="inserte el monto a dar" />
+
+
+                <!-- Botón Aceptar -->
+                <Button Text="aceptar"
+                        BackgroundColor="#40E0D0"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        Clicked="OnAgradecimientoTapped" />
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

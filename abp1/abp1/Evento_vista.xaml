@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="abp1.Evento_vista"
+             BackgroundColor="#D8E3F0"
+             Title="donacion de alimentos">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+
+
+            <!-- Imagen del evento -->
+            <Image Source="https://www.investopedia.com/thmb/CWFdk-YJkte3rNO_76FNCSfi5mM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1498170916-39ceb2a46795483fbbcb05ffa82b79eb.jpg"
+                   HeightRequest="150"
+                   Aspect="AspectFill"/>
+
+            <!-- Descripción del evento -->
+            <Label Text="descripcion del evento :" FontAttributes="Bold"/>
+            <Label Text="El propósito de este evento tiene solo un fin, ayudar a las personas con brindarles alimentos de manera voluntaria, esto con el propósito de tener una mejor vida y contamos con ayuda de las personas interesadas que gusten sumarse a este evento"
+                   FontSize="Small"
+                   LineBreakMode="WordWrap"/>
+
+            <!-- Foro de preguntas -->
+            <Frame BackgroundColor="#A9C9F9" CornerRadius="10">
+                <StackLayout Padding="10">
+                    <Label Text="Foro de preguntas" FontAttributes="Bold"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="❓" FontSize="Large" VerticalOptions="Center"/>
+                        <Entry x:Name="PreguntaEntry" Placeholder="agregar una pregunta" HorizontalOptions="FillAndExpand"/>
+                        <Button Text="📤" Clicked="OnEnviarPreguntaClicked"/>
+                    </StackLayout>
+                    <!-- Muro de preguntas -->
+                    <StackLayout x:Name="PreguntasMuro" Spacing="5" Margin="10,5,0,0"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- Comentarios -->
+            <Label Text="comentarios" FontAttributes="Bold"/>
+            <StackLayout Orientation="Horizontal">
+                <Entry x:Name="ComentarioEntry" Placeholder="escribe un comentario" HorizontalOptions="FillAndExpand"/>
+                <Button Text="📨" Clicked="OnEnviarComentarioClicked"/>
+            </StackLayout>
+
+            <!-- Muro de comentarios -->
+            <StackLayout x:Name="ComentariosMuro" Spacing="5" Margin="10,0,0,10"/>
+
+            <!-- Contactos -->
+            <Label Text="📞 55334564238"/>
+            <Label Text="👤 55334564238"/>
+
+            <!-- Botones inferiores -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
+                <Button Text="donar" BackgroundColor="#90EE90" Clicked="OnMeta_donacionClicked"/>
+                <Button Text="registrarse" BackgroundColor="#A9C9F9" Clicked="OnRegistrarseClicked"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
