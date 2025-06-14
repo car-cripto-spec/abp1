@@ -58,7 +58,11 @@ namespace abp1
             }
 
         }
+        private async void editarclick(object sender, EventArgs e)
+        {
+            // Navegar a la página de edición pasando el evento actual
+            await Navigation.PushAsync(new EditarEventoPage(eventoActual));
+        }
 
-        
     }
 }
